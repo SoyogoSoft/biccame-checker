@@ -1,7 +1,7 @@
 import type { Biccame } from '@/types/biccame';
 import { REGION } from '@/types/biccame';
 
-const modelVersion = 4;
+const modelVersion = 5;
 
 const models: Biccame[] = [
   {
@@ -110,6 +110,17 @@ const models: Biccame[] = [
     pos: {
       lat: 35.7312935,
       lng: 139.705081,
+    },
+    visitable: true,
+    region: REGION.tokyo,
+  },
+  {
+    name: 'たかさきたん',
+    storeName: 'ビックカメラ 高崎東口店',
+    url: 'takasaki',
+    pos: {
+      lat: 36.3217422,
+      lng: 139.0142643,
     },
     visitable: true,
     region: REGION.tokyo,
