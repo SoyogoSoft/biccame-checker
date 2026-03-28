@@ -100,7 +100,7 @@
             :alt="m.biccame.name"
             :class="m.visited ? 'active' : 'inactive'"
             height="64"
-            :src="`/${m.biccame.url}.png`"
+            :src="`https://bmcdn.akaneu.net/${m.biccame.url}.png`"
             style="box-sizing: content-box"
             :title="m.biccame.name"
             width="64"
