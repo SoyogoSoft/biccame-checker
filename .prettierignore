@@ -1,0 +1,15 @@
+# node packages
+node_modules/
+# output
+dist/
+
+# lock file
+pnpm-lock.yaml
+
+# config and misc files
+.idea/
+.editorconfig
+LICENSE
+NOTICE
+README.md
+renovate.json

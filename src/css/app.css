@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@import '@fontsource/m-plus-rounded-1c/japanese-700.css';
+
+@theme {
+  --font-sans: 'M PLUS Rounded 1c', sans-serif;
+  --font-weight: 700;
+}
