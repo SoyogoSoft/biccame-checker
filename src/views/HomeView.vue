@@ -187,7 +187,7 @@ const { display, visitedCount } = storeToRefs(visit);
 const tweetUrl = computed(() => {
   let url = 'https://twitter.com/intent/tweet?text=';
   url += encodeURIComponent(`私のビッカメ娘訪問率は${visitedCount.value}/${display.value.length}です！\n#ビッカメ娘`);
-  url += `&url=${window.location.href}`;
+  url += `&url=${encodeURIComponent(window.location.href)}`;
   return url;
 });
 
