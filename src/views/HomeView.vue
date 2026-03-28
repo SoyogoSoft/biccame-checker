@@ -33,14 +33,9 @@
         icon="i-fa7-brands:x-twitter"
         size="md"
         variant="outline"
+        @click="openTweet"
       >
-        <a
-          :href="tweetUrl"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          ついーとする
-        </a>
+        ついーとする
       </UButton>
     </div>
     <USeparator size="lg" />
@@ -190,6 +185,10 @@ const tweetUrl = computed(() => {
   url += `&url=${encodeURIComponent(window.location.href)}`;
   return url;
 });
+
+function openTweet() {
+  window.open(tweetUrl.value, '_blank', 'noopener, noreferrer');
+}
 
 let map: mapGl.Map;
 
