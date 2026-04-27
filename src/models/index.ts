@@ -1,7 +1,7 @@
 import type { Biccame } from '@/types/biccame';
 import { REGION } from '@/types/biccame';
 
-const modelVersion = 5;
+const modelVersion = 6;
 
 const models: Biccame[] = [
   {
@@ -154,6 +154,17 @@ const models: Biccame[] = [
     pos: {
       lat: 36.3701475,
       lng: 140.4768006,
+    },
+    visitable: true,
+    region: REGION.tokyo,
+  },
+  {
+    name: 'Airたん',
+    storeName: 'Air BicCamera 羽田空港第3ターミナル店',
+    url: 'air',
+    pos: {
+      lat: 35.5449247,
+      lng: 139.7666871,
     },
     visitable: true,
     region: REGION.tokyo,
