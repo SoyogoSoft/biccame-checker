@@ -134,7 +134,7 @@
               <img
                 :alt="selected?.name"
                 height="64"
-                :src="`/${selected?.url}.png`"
+                :src="`https://bmcdn.akaneu.net/${selected?.url}.png`"
                 width="64"
               />
               <div class="map-info-text">
