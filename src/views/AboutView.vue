@@ -20,7 +20,7 @@
         作者ついった～は
         <a
           class="hover:underline inline-block text-blue-600"
-          href="https://x.com/td22065"
+          href="https://x.com/akane_al1s"
           rel="noopener noreferrer"
           target="_blank"
         >
