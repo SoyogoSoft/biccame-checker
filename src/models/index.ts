@@ -1,7 +1,7 @@
 import type { Biccame } from '@/types/biccame';
 import { REGION } from '@/types/biccame';
 
-const modelVersion = 6;
+const modelVersion = 7;
 
 const models: Biccame[] = [
   {
@@ -355,6 +355,17 @@ const models: Biccame[] = [
     },
     visitable: true,
     region: REGION.misc,
+  },
+  {
+    name: '浦和たん',
+    storeName: 'ビックカメラ 浦和西口店',
+    url: 'urawa',
+    pos: {
+      lat: 35.8578026,
+      lng: 139.656915,
+    },
+    visitable: true,
+    region: REGION.tokyo,
   },
   {
     name: 'せいせきたん',
