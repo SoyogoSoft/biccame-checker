@@ -9,8 +9,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['maplibre-gl'],
+        manualChunks(id) {
+          if (id.includes('node_modules/maplibre-gl')) {
+            return 'maplibre';
+          }
         },
       },
     },
