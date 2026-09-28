@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es2022",
     "useDefineForClassFields": true,
     "module": "es2022",
@@ -17,7 +16,7 @@
     "sourceMap": false,
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["./src/*"],
       "#build/ui/*": ["./node_modules/.nuxt-ui/ui/*"]
     }
   },
