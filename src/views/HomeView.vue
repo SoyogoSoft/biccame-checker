@@ -162,13 +162,17 @@
 
 <script setup lang="ts">
 import type { Marker } from 'maplibre-gl';
-import mapGl from 'maplibre-gl';
+import * as mapGl from 'maplibre-gl';
+import { setWorkerUrl } from 'maplibre-gl';
 import { storeToRefs } from 'pinia';
-import { computed, onMounted, nextTick, ref, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import { modelVersion } from '@/models';
 import { useConfigStore } from '@/stores/config';
 import { useVisitStore } from '@/stores/visit';
 import type { Biccame, BiccameState } from '@/types/biccame';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
+setWorkerUrl(workerUrl);
 
 type SelectedBiccame = Biccame & {
   _visitedRef?: BiccameState;
