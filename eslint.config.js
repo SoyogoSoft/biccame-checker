@@ -1,11 +1,10 @@
 import eslint from '@eslint/js';
 import parser from '@typescript-eslint/parser';
-import importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import-x';
 import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
 import tslint from 'typescript-eslint';
 import vueParser from 'vue-eslint-parser';
-import project from './tsconfig.json' with { type: 'json' };
 
 export default [
   {
@@ -17,19 +16,21 @@ export default [
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   {
+    files: ['**/*.{ts,tsx,vue}'],
     languageOptions: {
       globals: {
         ...globals.browser,
       },
       parser: parser,
       parserOptions: {
-        project,
+        project: './tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
         ecmaVersion: 'latest',
+        extraFileExtensions: ['.vue'],
       },
     },
     settings: {
-      'import/resolver': {
+      'import-x/resolver': {
         typescript: {
           alwaysTryTypes: true,
           project: 'tsconfig.json',
@@ -50,7 +51,7 @@ export default [
           argsIgnorePattern: '^_',
         },
       ],
-      'import/order': [
+      'import-x/order': [
         'error',
         {
           alphabetize: {
@@ -58,7 +59,7 @@ export default [
           },
         },
       ],
-      'import/no-named-as-default-member': ['off'],
+      'import-x/no-named-as-default-member': ['off'],
       '@typescript-eslint/consistent-type-imports': ['error'],
       '@typescript-eslint/no-inferrable-types': ['warn'],
       'vue/attributes-order': ['error', { alphabetical: true }],
