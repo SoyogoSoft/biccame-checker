@@ -19,7 +19,7 @@
 
     <!-- 結果表示 -->
     <div class="flex items-center justify-center pb-2 space-x-4">
-      <h4 class="m-0 text-[clamp(1.25rem,5.5vw,1.875rem)]">
+      <h4 class="m-0 text-[clamp(1.25rem,5.5vw,1.875rem)] text-gray-800">
         訪問済ビッカメ娘:
         <span class="text-red-600">{{ `${visit.visitedCount} ` }}</span> /
         {{ visit.display.length }}
@@ -74,7 +74,7 @@
           大阪組を一括訪問済にする！
         </UButton>
         <UButton
-          class="col-span-2 sm:col-auto sm:w-auto w-full"
+          class="col-span-2 sm:col-auto sm:w-auto text-white w-full"
           color="error"
           icon="i-rivet-icons:close-circle"
           size="md"
@@ -90,6 +90,7 @@
     <div class="flex justify-center mt-3 pb-3">
       <UCheckbox
         v-model="config.includeNotVisitable"
+        class="text-gray-800"
         label="卒業したビッカメ娘を表示する"
       />
     </div>
