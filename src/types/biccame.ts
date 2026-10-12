@@ -7,6 +7,7 @@ export interface Biccame {
   // 卒業;;
   visitable: boolean;
   region: Region;
+  imgPos: ImgPos;
 }
 
 export interface BiccameState {
@@ -18,6 +19,13 @@ export interface BiccameState {
 export interface Pos {
   lat: number;
   lng: number;
+}
+
+export interface ImgPos {
+  // 横n番目
+  v: number;
+  // 縦n番目
+  h: number;
 }
 
 /* 地域で一括ON/OFFするためのフラグ  */

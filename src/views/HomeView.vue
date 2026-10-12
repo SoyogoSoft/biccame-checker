@@ -37,6 +37,16 @@
       >
         ついーとする
       </UButton>
+      <UButton
+        class="ml-2 my-2"
+        color="primary"
+        icon="i-rivet-icons:download"
+        :loading="isSavingImage"
+        variant="outline"
+        @click="saveImage"
+      >
+        画像を保存
+      </UButton>
     </div>
     <USeparator size="lg" />
 
@@ -168,6 +178,7 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import { storeToRefs } from 'pinia';
 import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import { modelVersion } from '@/models';
+import { imgCoords } from '@/models/imgCoords';
 import { useConfigStore } from '@/stores/config';
 import { useVisitStore } from '@/stores/visit';
 import type { Biccame, BiccameState } from '@/types/biccame';
@@ -181,7 +192,7 @@ type SelectedBiccame = Biccame & {
 const config = useConfigStore();
 const visit = useVisitStore();
 
-const { display, visitedCount } = storeToRefs(visit);
+const { display, state, visitedCount } = storeToRefs(visit);
 
 const tweetUrl = computed(() => {
   let url = 'https://twitter.com/intent/tweet?text=';
@@ -192,6 +203,67 @@ const tweetUrl = computed(() => {
 
 function openTweet() {
   window.open(tweetUrl.value, '_blank', 'noopener, noreferrer');
+}
+
+const isSavingImage = ref(false);
+
+async function saveImage() {
+  isSavingImage.value = true;
+
+  try {
+    const image = new Image();
+    image.src = `${import.meta.env.BASE_URL}musume_list.png`;
+    await new Promise<void>((resolve, reject) => {
+      image.onload = () => resolve();
+      image.onerror = () => reject(new Error('画像を読み込めませんでした'));
+    });
+
+    const canvas = document.createElement('canvas');
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    const context = canvas.getContext('2d');
+    if (!context) {
+      throw new Error('canvasを作成できませんでした');
+    }
+
+    context.drawImage(image, 0, 0);
+    context.strokeStyle = '#dc2626';
+    context.lineWidth = 3;
+    context.lineCap = 'round';
+    context.lineJoin = 'round';
+
+    for (const item of state.value) {
+      if (!item.visited) continue;
+
+      const x = imgCoords.vert[item.biccame.imgPos.v];
+      const y = imgCoords.horiz[item.biccame.imgPos.h];
+      if (x === undefined || y === undefined) continue;
+
+      context.beginPath();
+      context.moveTo(x + 3, y + 10);
+      context.lineTo(x + 8, y + 15);
+      context.lineTo(x + 17, y + 5);
+      context.stroke();
+    }
+
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob((value) => {
+        if (value) {
+          resolve(value);
+        } else {
+          reject(new Error('画像を保存できませんでした'));
+        }
+      }, 'image/png');
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'musume_list.png';
+    link.click();
+    URL.revokeObjectURL(url);
+  } finally {
+    isSavingImage.value = false;
+  }
 }
 
 let map: mapGl.Map;
