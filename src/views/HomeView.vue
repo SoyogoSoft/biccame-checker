@@ -212,7 +212,8 @@ async function saveImage() {
 
   try {
     const image = new Image();
-    image.src = `${import.meta.env.BASE_URL}musume_list.png`;
+    image.crossOrigin = 'anonymous';
+    image.src = 'https://bmcdn.akaneu.net/sheets/musume_list.png';
     await new Promise<void>((resolve, reject) => {
       image.onload = () => resolve();
       image.onerror = () => reject(new Error('画像を読み込めませんでした'));
