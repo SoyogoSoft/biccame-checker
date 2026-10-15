@@ -90,9 +90,12 @@
     <div class="flex justify-center mt-3 pb-3">
       <UCheckbox
         v-model="config.includeNotVisitable"
-        class="text-gray-800"
         label="卒業したビッカメ娘を表示する"
-      />
+      >
+        <template #label="{ label }">
+          <span class="text-gray-800">{{ label }}</span>
+        </template>
+      </UCheckbox>
     </div>
 
     <!-- ビッカメ娘の選択 -->
