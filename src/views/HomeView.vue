@@ -22,7 +22,7 @@
       <h4 class="m-0 text-[clamp(1.25rem,5.5vw,1.875rem)] text-gray-800">
         訪問済ビッカメ娘:
         <span class="text-red-600">{{ `${visit.visitedCount} ` }}</span> /
-        {{ visit.display.length }}
+        {{ visit.count }}
         人
       </h4>
     </div>
@@ -283,6 +283,7 @@ watch(visitedCount, (_new, _old) => {
   }
   markers.length = 0;
   for (const v of display.value) {
+    if (!v.biccame.pos) continue;
     const marker = new mapGl.Marker({
       color: v.visited ? '#2269dc' : '#dc2222',
       draggable: false,
@@ -311,6 +312,7 @@ onMounted(() => {
 
   nextTick(() => {
     for (const v of display.value) {
+      if (!v.biccame.pos) continue;
       const marker = new mapGl.Marker({
         color: v.visited ? '#2269dc' : '#dc2222',
         draggable: false,

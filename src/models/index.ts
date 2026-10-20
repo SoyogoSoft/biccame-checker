@@ -1,7 +1,7 @@
 import type { Biccame } from '@/types/biccame';
 import { REGION } from '@/types/biccame';
 
-const modelVersion = 8;
+const modelVersion = 9;
 
 const models: Biccame[] = [
   {
@@ -15,6 +15,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.misc,
     imgPos: { v: 8, h: 4 },
+    isCounted: true,
   },
   {
     name: '新横たん',
@@ -27,6 +28,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 7, h: 4 },
+    isCounted: true,
   },
   {
     name: 'みっけたん',
@@ -39,6 +41,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 0, h: 0 },
+    isCounted: true,
   },
   {
     name: '横西たん',
@@ -51,6 +54,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 1, h: 4 },
+    isCounted: true,
   },
   {
     name: 'にいがたたん',
@@ -63,6 +67,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 6, h: 5 },
+    isCounted: true,
   },
   {
     name: 'くまもとたん',
@@ -75,6 +80,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 4, h: 5 },
+    isCounted: true,
   },
   {
     name: '藤沢たん',
@@ -87,6 +93,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 5, h: 4 },
+    isCounted: true,
   },
   {
     name: 'なんばたん',
@@ -99,6 +106,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.osaka,
     imgPos: { v: 0, h: 4 },
+    isCounted: true,
   },
   {
     name: '町田たん',
@@ -111,6 +119,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 6, h: 1 },
+    isCounted: true,
   },
   {
     name: 'あいタワたん',
@@ -123,6 +132,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 3, h: 0 },
+    isCounted: true,
   },
   {
     name: 'たかさきたん',
@@ -135,6 +145,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 6, h: 3 },
+    isCounted: true,
   },
   {
     name: 'なごやげーとたん',
@@ -147,6 +158,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 3, h: 5 },
+    isCounted: true,
   },
   {
     name: 'なごやたん',
@@ -159,6 +171,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 7, h: 5 },
+    isCounted: true,
   },
   {
     name: '水戸たん',
@@ -171,6 +184,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 3, h: 3 },
+    isCounted: true,
   },
   {
     name: 'Airたん',
@@ -183,6 +197,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 9, h: 5 },
+    isCounted: false,
   },
   {
     name: '池西たん',
@@ -195,6 +210,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 2, h: 0 },
+    isCounted: true,
   },
   {
     name: '有楽町たん',
@@ -207,6 +223,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 5, h: 1 },
+    isCounted: true,
   },
   {
     name: '八王子たん',
@@ -219,6 +236,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 1, h: 1 },
+    isCounted: true,
   },
   {
     name: '柏たん',
@@ -231,6 +249,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 1, h: 2 },
+    isCounted: true,
   },
   {
     name: 'ふなたん',
@@ -243,6 +262,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 3, h: 2 },
+    isCounted: true,
   },
   {
     name: 'しんじゅくたん(ビックロたん)',
@@ -255,6 +275,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 8, h: 0 },
+    isCounted: true,
   },
   {
     name: 'はまたん',
@@ -267,6 +288,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 5, h: 5 },
+    isCounted: true,
   },
   {
     name: '新宿西口たん',
@@ -279,6 +301,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 6, h: 0 },
+    isCounted: true,
   },
   {
     name: 'アキバたん',
@@ -291,6 +314,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 4, h: 1 },
+    isCounted: true,
   },
   {
     name: 'フォトたん',
@@ -303,6 +327,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 7, h: 3 },
+    isCounted: true,
   },
   {
     name: 'カメ館たん',
@@ -315,6 +340,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 5, h: 0 },
+    isCounted: true,
   },
   {
     name: 'パソ館たん',
@@ -327,6 +353,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 1, h: 0 },
+    isCounted: true,
   },
   {
     name: 'しぶとーたん',
@@ -339,6 +366,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 3, h: 1 },
+    isCounted: true,
   },
   {
     name: 'しぶハチたん',
@@ -351,6 +379,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 0, h: 1 },
+    isCounted: true,
   },
   {
     name: 'さがみたん',
@@ -363,6 +392,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 3, h: 4 },
+    isCounted: true,
   },
   {
     name: 'さっぽろたん',
@@ -375,6 +405,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 0, h: 5 },
+    isCounted: true,
   },
   {
     name: '広島たん',
@@ -387,6 +418,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 2, h: 2 },
+    isCounted: true,
   },
   {
     name: '浦和たん',
@@ -399,6 +431,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 4, h: 2 },
+    isCounted: true,
   },
   {
     name: 'せいせきたん',
@@ -411,6 +444,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 2, h: 1 },
+    isCounted: true,
   },
   {
     name: 'あべのたん',
@@ -423,6 +457,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.osaka,
     imgPos: { v: 6, h: 4 },
+    isCounted: true,
   },
   {
     name: '調布たん',
@@ -435,6 +470,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 8, h: 1 },
+    isCounted: true,
   },
   {
     name: '岡山たん',
@@ -447,6 +483,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 0, h: 2 },
+    isCounted: true,
   },
   {
     name: 'たかつきたん',
@@ -459,6 +496,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.osaka,
     imgPos: { v: 2, h: 4 },
+    isCounted: true,
   },
   {
     name: '新東たん',
@@ -471,6 +509,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 7, h: 0 },
+    isCounted: true,
   },
   {
     name: '本店たん',
@@ -483,6 +522,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 4, h: 0 },
+    isCounted: true,
   },
   {
     name: '立川たん',
@@ -495,6 +535,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 7, h: 1 },
+    isCounted: true,
   },
   {
     name: '天神2号たん',
@@ -507,6 +548,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 8, h: 5 },
+    isCounted: true,
   },
   {
     name: '所沢たん',
@@ -519,6 +561,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 8, h: 2 },
+    isCounted: true,
   },
   {
     name: 'プロスタたん',
@@ -531,6 +574,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 8, h: 3 },
+    isCounted: true,
   },
   {
     name: '八尾たん',
@@ -543,6 +587,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.osaka,
     imgPos: { v: 4, h: 4 },
+    isCounted: true,
   },
   {
     name: 'ふなとーたん',
@@ -555,6 +600,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 7, h: 2 },
+    isCounted: true,
   },
   {
     name: 'たまプラたん',
@@ -567,6 +613,7 @@ const models: Biccame[] = [
     visitable: false,
     region: REGION.tokyo,
     imgPos: { v: 5, h: 3 },
+    isCounted: true,
   },
   {
     name: '川崎たん',
@@ -579,6 +626,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 4, h: 3 },
+    isCounted: true,
   },
   {
     name: '千葉たん',
@@ -591,6 +639,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 5, h: 2 },
+    isCounted: true,
   },
   {
     name: '天神1号たん',
@@ -603,6 +652,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 2, h: 5 },
+    isCounted: true,
   },
   {
     name: '大宮たん',
@@ -615,6 +665,7 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.tokyo,
     imgPos: { v: 6, h: 2 },
+    isCounted: true,
   },
   {
     name: '鹿児島たん',
@@ -627,6 +678,17 @@ const models: Biccame[] = [
     visitable: true,
     region: REGION.misc,
     imgPos: { v: 1, h: 5 },
+    isCounted: true,
+  },
+  {
+    name: 'ビックシムたん',
+    storeName: 'BIC SIM',
+    url: 'bicsim',
+    pos: null,
+    visitable: true,
+    region: REGION.misc,
+    imgPos: { v: 10, h: 2 },
+    isCounted: false,
   },
 ];
 
