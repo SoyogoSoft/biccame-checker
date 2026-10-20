@@ -30,9 +30,14 @@ export const useVisitStore = defineStore(
       return config.includeNotVisitable ? state.value : state.value.filter((v) => v.biccame.visitable);
     });
 
+    /* ビッカメ娘の人数 */
+    const count = computed(() => {
+      return display.value.filter((v) => v.biccame.isCounted).length;
+    });
+
     /* 訪問済ビッカメ娘の人数 */
     const visitedCount = computed(() => {
-      return display.value.filter((v) => v.visited).length;
+      return display.value.filter((v) => v.visited && v.biccame.isCounted).length;
     });
 
     /* 訪問リストを初期化する */
@@ -66,7 +71,7 @@ export const useVisitStore = defineStore(
       }
     }
 
-    return { state, version, display, visitedCount, reset, migrate, checkTokyo, checkOsaka };
+    return { state, version, display, count, visitedCount, reset, migrate, checkTokyo, checkOsaka };
   },
   { persist: true },
 );

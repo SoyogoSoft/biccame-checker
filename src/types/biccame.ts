@@ -3,11 +3,14 @@ export interface Biccame {
   storeName: string;
   /* DO NOT CHANGE/REMOVE/EDIT THIS PROP */
   url: string;
-  pos: Pos;
+  pos: Pos | null;
   // 卒業;;
   visitable: boolean;
   region: Region;
+  // 川崎たんのチェックリストの位置
   imgPos: ImgPos;
+  // ビッカメ娘としてカウントするかどうか
+  isCounted: boolean;
 }
 
 export interface BiccameState {
